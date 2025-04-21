@@ -365,9 +365,9 @@
           /(nubank|itau|caixa|bradesco|santander|banco)/
         ];
         const acertos = padroes.filter(r => r.test(texto)).length;
-        if (acertos >= 3) {
-          status.textContent = "Comprovante de Pix identificado!";
-          status.style.color = "green";
+        if (acertos >= 30) {
+          status.textContent = "Imagem não parece ser um comprovante válido.";
+          status.style.color = "red";
         } else {
           status.textContent = "Imagem não parece ser um comprovante válido.";
           status.style.color = "red";
